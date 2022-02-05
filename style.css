@@ -1,0 +1,43 @@
+*{  padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.aa {
+    width: 600px;
+    margin: 100px auto;
+    box-shadow: -2px 3px 18px 4px #ddd;
+    border-radius: 10px;
+    padding: 10px;
+
+}
+.faccordion{
+    margin-bottom: 10px;
+}
+.faccordion .faccordion-header{
+    padding: 20px 30px;
+    border-bottom: 1px solid #ddd;
+    position: relative;
+    cursor: pointer;
+}
+.faccordion .faccordion-header::after{
+    content: '\2192';
+    position: absolute;
+    top: 30%;
+    right: 20px;
+    font-size: 20px;
+}
+.faccordion .faccordion-header.active::after{
+    transform: rotate(90deg);
+}
+.faccordion .faccordion-body{
+    padding: 20px 30px;
+    display: none;
+
+}
+.faccordion .faccordion-body.active{
+
+    display: block;
+    transition: .5s;
+
+}
